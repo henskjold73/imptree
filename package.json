@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "test": "vitest",
     "prepublishOnly": "npm run build",
     "pack:test": "npm pack",
     "clean": "rimraf dist"
@@ -39,19 +40,21 @@
   "dependencies": {
     "@babel/parser": "^7.28.5",
     "@babel/traverse": "^7.28.5",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
     "glob": "^11.0.3",
     "graphlib": "^2.1.8",
     "open": "^10.2.0",
-    "pako": "^2.1.0",
-    "commander": "^14.0.2",
-    "chalk": "^5.6.2"
+    "pako": "^2.1.0"
   },
   "devDependencies": {
     "@types/babel__traverse": "^7.28.0",
     "@types/glob": "^8.1.0",
     "@types/node": "^24.9.2",
     "@types/pako": "^2.0.4",
+    "@vitest/ui": "^4.0.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.5"
   }
 }
