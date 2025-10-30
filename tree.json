@@ -1,0 +1,67 @@
+{
+  "root": "src/cli.ts",
+  "nodes": [
+    "src/core/parser.ts",
+    "src/core/resolver.ts",
+    "src/core/types.ts",
+    "src/core/crawler.ts",
+    "src/render/tree.ts",
+    "src/render/json.ts",
+    "src/cli.ts"
+  ],
+  "edges": [
+    {
+      "from": "src/core/crawler.ts",
+      "to": "src/core/parser.ts"
+    },
+    {
+      "from": "src/core/crawler.ts",
+      "to": "src/core/resolver.ts"
+    },
+    {
+      "from": "src/core/crawler.ts",
+      "to": "src/core/types.ts"
+    },
+    {
+      "from": "src/render/tree.ts",
+      "to": "src/core/types.ts"
+    },
+    {
+      "from": "src/render/json.ts",
+      "to": "src/core/types.ts"
+    },
+    {
+      "from": "src/cli.ts",
+      "to": "src/core/crawler.ts"
+    },
+    {
+      "from": "src/cli.ts",
+      "to": "src/render/tree.ts"
+    },
+    {
+      "from": "src/cli.ts",
+      "to": "src/render/json.ts"
+    }
+  ],
+  "adjacency": {
+    "src/core/parser.ts": [],
+    "src/core/resolver.ts": [],
+    "src/core/types.ts": [],
+    "src/core/crawler.ts": [
+      "src/core/parser.ts",
+      "src/core/resolver.ts",
+      "src/core/types.ts"
+    ],
+    "src/render/tree.ts": [
+      "src/core/types.ts"
+    ],
+    "src/render/json.ts": [
+      "src/core/types.ts"
+    ],
+    "src/cli.ts": [
+      "src/core/crawler.ts",
+      "src/render/tree.ts",
+      "src/render/json.ts"
+    ]
+  }
+}
